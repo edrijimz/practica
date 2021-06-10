@@ -1,4 +1,4 @@
-let table = document.querySelector("#tableUno tbody")
+let table = document.querySelector("#users-table tbody")
 
 const users = [
     {
@@ -53,10 +53,10 @@ const users = [
     },
 ]
 
-function createTable (usersList){
-  for (let i= 0; i <usersList.length; i++) {
-    let userEmail = userList[i].email
-    if (usersList[i].email.endWith("@academlo.com")) {
+function createTable (usersList) {
+  for (let i= 0; i <users.length; i++) {
+    let userEmail = users[i].email
+    if (users[i].email.endsWith("@academlo.com")) {
       let newRow =document.createElement("tr");
       table.appendChild(newRow);
       // for (let j  = 0, j < usersList[j].social.length, j++) {
@@ -64,21 +64,22 @@ function createTable (usersList){
       // }
 
       let userName = document.createElement("td");
-      userName.innerText = usersList[i].name;
+      userName.innerText = users[i].name;
       let userEmail = document.createElement("td");
-      userEmail.innerText = usersList[i].email;
+      userEmail.innerText = users[i].email;
       let userSexo = document.createElement("td");
-      userSexo.innerText = usersList[i].gender;
+      userSexo.innerText = users[i].gender;
 let userSocial = document.createElement("td");
-userSocial.innerText = usersList[i].social;
-       newRow.appendChild(userEmail);
-      newRow.appendChild(userName);
-      newRow.appendChild(userSocial);
+userSocial.innerText = users[i].social;
+newRow.appendChild(userName);       
+newRow.appendChild(userEmail);
       newRow.appendChild(userSexo);
+      newRow.appendChild(userSocial);
+      
     }
      }
-     createTable() 
 }
+createTable(users); 
 
 const filterEmail = users.filter(function(emails) {
  return emails.email === "@academlo.com";

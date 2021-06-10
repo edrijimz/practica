@@ -1,0 +1,18 @@
+table {
+  border: solid gray 2px;
+  background: #e8e8e8
+  text-align: center;
+  justify-content: center;
+  margin: 5px;
+  display: flex;
+  width: 60%;
+  padding: 10px;
+}
+
+td {
+  border: solid blue 1px;
+  background-color: black;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
